@@ -1,0 +1,50 @@
+﻿@model Trabalho.Models.Aluno
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Aluno</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Curso)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Curso)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Termo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Termo)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.AlunoId }) |
+        @Html.ActionLink("Voltar a Lista", "Index")
+    </p>
+</body>
+</html>
